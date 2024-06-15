@@ -28,9 +28,8 @@ export default {
     this.todos = await fetchTodos();
   },
   methods: {
-    async deleteTodo(id) {
-      await deleteTodo(id);
-      this.todos = this.todos.filter(todo => todo.id !== id);
+    async deleteTodo(todo) {
+      this.todos = await deleteTodo(todo);
     },
     async toggleTodo(todo) {
       const originalStatus = todo.completed;

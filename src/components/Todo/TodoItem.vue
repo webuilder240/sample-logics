@@ -19,7 +19,7 @@ export default {
       this.$emit('toggle-todo', this.todo);
     },
     deleteTodo() {
-      this.$emit('delete-todo', this.todo.id);
+      this.$emit('delete-todo', this.todo);
     },
     viewDetail() {
       this.$emit('view-detail', this.todo);
